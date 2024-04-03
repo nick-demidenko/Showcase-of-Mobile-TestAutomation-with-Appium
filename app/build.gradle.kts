@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.Packaging
+
 plugins {
   id("com.android.application")
   kotlin("android")
@@ -48,6 +50,7 @@ android {
   packaging {
     resources {
       excludes += setOf("META-INF/proguard/androidx-annotations.pro")
+      excludes += ("META-INF/DEPENDENCIES");
     }
   }
 
@@ -59,6 +62,12 @@ android {
 }
 
 dependencies {
+  testImplementation("androidx.test:testing-junit:1.4.0")
+  androidTestImplementation("androidx.test:core-ktx:1.5.0")
+  androidTestImplementation ("io.appium:java-client:9.2.0")
+  androidTestImplementation ("org.seleniumhq.selenium:selenium-java:4.18.1")
+  implementation ("org.apache.httpcomponents:httpcore:4.4.16");
+  implementation ("org.apache.httpcomponents:httpclient:4.5.14");
   kotlin()
   compat()
   fragment()

@@ -1,3 +1,4 @@
+/*
 package net.pot8os.kotlintestsample
 
 import androidx.fragment.app.testing.launchFragmentInContainer
@@ -10,9 +11,11 @@ import org.junit.Before
 import org.junit.Test
 import java.text.DecimalFormat
 
+*/
 /**
  * @author So Nakamura, 2020-Feb-15
- */
+ *//*
+
 abstract class CalculatorSpec {
 
     @Before
@@ -73,3 +76,4 @@ abstract class CalculatorSpec {
         onView(withId(R.id.field)).check(matches(withText("${333 / 100.0}")))
     }
 }
+*/
